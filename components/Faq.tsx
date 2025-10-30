@@ -29,16 +29,12 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer, isOpen, onClick }) 
 );
 
 const Faq: React.FC = () => {
-    const [openIndex, setOpenIndex] = useState<number | null>(0);
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     const faqs = [
         {
-            q: "¿Cuál es la ubicación física y el teléfono de contacto?",
-            a: "Nuestra oficina se encuentra en el Centro Comercial La Colmena, Carrera 4 #13-32, Anserma, Caldas. Nuestro teléfono de contacto es el 311 3653379."
-        },
-        {
-            q: "¿Cuál es el número del Registro Nacional de Turismo (RNT)?",
-            a: "Nuestro RNT es el 181495. Estamos clasificados como una Agencia de Viajes y Turismo, un Prestador de Servicios Turísticos (PST)."
+            q: "¿La agencia se responsabiliza por el servicio de transporte aéreo?",
+            a: "La responsabilidad se limita a los términos del programa. No asumimos responsabilidad por el transporte aéreo, salvo en vuelos fletados bajo las condiciones del contrato de transporte."
         },
         {
             q: "¿Qué sucede si mi viaje se cancela por fuerza mayor?",
@@ -55,14 +51,6 @@ const Faq: React.FC = () => {
         {
             q: "¿Quién es responsable por mi equipaje y documentos?",
             a: "El pasajero es el exclusivo responsable de la custodia de su equipaje y documentos de viaje. La agencia puede orientar en caso de extravío, pero no responderá por la pérdida o daño."
-        },
-        {
-            q: "¿Cuáles son mis derechos sobre mis datos personales?",
-            a: "Tiene derecho a conocer, actualizar, rectificar y consultar sus datos personales, solicitar prueba de la autorización, ser informado sobre el uso de sus datos, y revocar la autorización o solicitar la supresión de algún dato."
-        },
-        {
-            q: "¿Cómo puedo hacer una consulta o reclamo sobre mis datos?",
-            a: "Puede enviar sus peticiones, quejas o reclamos (PQR) relacionados con el tratamiento de sus datos personales al correo electrónico planificatusueno12@gmail.com."
         }
     ];
 

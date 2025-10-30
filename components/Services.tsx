@@ -1,6 +1,6 @@
+
 import React from 'react';
-import { PackageIcon, VisaIcon, SupportIcon, TransportIcon, HotelIcon, FoodIcon, WorldIcon, TicketIcon, CameraIcon } from './Icons';
-import { Service } from '../types';
+import { PackageIcon, VisaIcon, SupportIcon, TransportIcon, HotelIcon, FoodIcon } from './Icons';
 
 interface ServiceCardProps {
     icon: React.ReactNode;
@@ -18,19 +18,41 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description }) =
     </div>
 );
 
-const iconMap: { [key: string]: React.ReactNode } = {
-    'Package': <PackageIcon />,
-    'Visa': <VisaIcon />,
-    'Support': <SupportIcon />,
-    'Transport': <TransportIcon />,
-    'Hotel': <HotelIcon />,
-    'Food': <FoodIcon />,
-    'World': <WorldIcon />,
-    'Ticket': <TicketIcon />,
-    'Camera': <CameraIcon />,
-};
 
-const Services: React.FC<{ services: Service[] }> = ({ services }) => {
+const Services: React.FC = () => {
+    const servicesList = [
+        {
+            icon: <PackageIcon />,
+            title: "Planes de Ocio",
+            description: "Paquetes turísticos completos a destinos de sol y playa, enfocados en el escape vacacional."
+        },
+        {
+            icon: <TransportIcon />,
+            title: "Transporte",
+            description: "Gestionamos tus tiquetes aéreos y traslados para que no te preocupes por nada."
+        },
+        {
+            icon: <HotelIcon />,
+            title: "Alojamiento",
+            description: "Reservamos el hotel ideal para ti, según tu presupuesto y preferencias de categoría."
+        },
+        {
+            icon: <FoodIcon />,
+            title: "Alimentación",
+            description: "Planes con alimentación incluida para que disfrutes al máximo de la gastronomía local."
+        },
+        {
+            icon: <VisaIcon />,
+            title: "Asesoría de Visas",
+            description: "Te brindamos la asesoría necesaria en caso de que tu destino soñado requiera una visa."
+        },
+        {
+            icon: <SupportIcon />,
+            title: "Atención al Cliente",
+            description: "Soporte integral para consultas, peticiones, quejas y reclamos, siempre listos para ayudarte."
+        }
+    ];
+
   return (
     <section id="services" className="py-20 px-4">
       <div className="container mx-auto">
@@ -42,13 +64,8 @@ const Services: React.FC<{ services: Service[] }> = ({ services }) => {
         </div>
          <div className="p-8 rounded-3xl shadow-[inset_8px_8px_16px_#bebebe,inset_-8px_-8px_16px_#ffffff] bg-[#e0e0e0]">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                {services.map(service => (
-                    <ServiceCard 
-                        key={service.title} 
-                        title={service.title}
-                        description={service.description}
-                        icon={iconMap[service.icon] || <PackageIcon />}
-                    />
+                {servicesList.map(service => (
+                    <ServiceCard key={service.title} {...service} />
                 ))}
             </div>
          </div>

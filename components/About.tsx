@@ -31,13 +31,13 @@ const About: React.FC = () => {
         <div className="p-8 rounded-3xl shadow-[inset_8px_8px_16px_#bebebe,inset_-8px_-8px_16px_#ffffff] bg-[#e0e0e0]">
             <div className="grid md:grid-cols-3 gap-8">
                 <InfoCard icon={<MissionIcon />} title="Misión">
-                    Ser el portal profesional de salida (gateway) que facilita la materialización de los sueños de escape vacacional y ocio de la población en el Occidente de Caldas, ofreciendo una gestión de viajes organizada, vibrante y confiable.
+                    Ser el portal profesional que facilita la materialización de los sueños de escape vacacional y ocio de nuestra comunidad, ofreciendo una gestión de viajes organizada, vibrante y confiable.
                 </InfoCard>
                 <InfoCard icon={<VisionIcon />} title="Visión">
-                    Consolidar nuestro liderazgo de reputación en el mercado regional, manteniendo un nivel de satisfacción del cliente excepcional (4.9 estrellas) y proyectando una marca dinámica y profesional para asegurar la fidelización a largo plazo.
+                    Consolidar nuestro liderazgo y reputación en el mercado regional, manteniendo el más alto nivel de satisfacción del cliente y garantizando una operación robusta para la fidelización a largo plazo.
                 </InfoCard>
                 <InfoCard icon={<ValuesIcon />} title="Valores">
-                    Nuestros pilares son la **Confianza** (alta reputación), **Profesionalismo** (atención al detalle), **Dinamismo** (energía y entusiasmo), **Organización** (gestión impecable) y **Conocimiento Global** (expertos en destinos).
+                    Confianza, Amabilidad, Profesionalismo, Dinamismo, Organización y Conocimiento Global son los pilares que guían cada uno de nuestros pasos para ofrecerte la mejor experiencia.
                 </InfoCard>
             </div>
         </div>
